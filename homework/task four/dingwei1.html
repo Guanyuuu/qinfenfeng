@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位与布局</title>
+    <style>
+        /* 第一种 */
+        .big {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            background-color: #ccc;
+            margin: 0 auto;
+        }
+
+        .sanxing1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-bottom-right-radius: 50px;
+            background-color: yellow;
+        }
+
+        .sanxing2 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            border-top-left-radius: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <div class="sanxing1"></div>
+        <div class="sanxing2"></div>
+    </div>
+</body>
+
+</html>

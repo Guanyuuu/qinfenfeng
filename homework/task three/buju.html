@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 第一种 */
+        
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .con {
+            padding: 20px 160px 20px 240px;
+            background-color: #eeeeee;
+            overflow: hidden;
+            margin-bottom: 60px;
+        }
+        
+        .center {
+            width: 100%;
+            background-color: #ffff;
+            height: auto;
+            text-indent: 2em;
+            float: left;
+        }
+        
+        .left {
+            height: 300px;
+            width: 200px;
+            background-color: #ffff;
+            float: left;
+            margin-left: -220px;
+        }
+        
+        .right {
+            height: 600px;
+            width: 120px;
+            background-color: #ffff;
+            float: right;
+            margin-right: -140px;
+        }
+        /* 第二种 */
+        
+        .con1 {
+            position: relative;
+            padding: 20px 160px 20px 240px;
+            background-color: #eeeeee;
+            height: auto;
+            margin-bottom: 60px;
+        }
+        
+        .center1 {
+            width: 100%;
+            background-color: #ffff;
+            height: auto;
+            text-indent: 2em;
+        }
+        
+        .left1 {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            background-color: #ffff;
+            height: 300px;
+            width: 200px;
+        }
+        
+        .right1 {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-color: #ffff;
+            height: 600px;
+            width: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="left">
+            <div style="width: 80px; height: 80px; background-color: #dfdfdf;margin: 20px 0 20px 20px;"></div>
+        </div>
+        <div class="right">
+            <div style="width: 80px;height: 80px;background-color: #dfdfdf;margin: 20px 20px 20px 20px;"></div>
+            <div style="width: 80px;height: 80px;background-color: #dfdfdf;margin: 20px 20px 20px 20px;"></div>
+            <div style="width: 80px;height: 80px;background-color: #dfdfdf;margin: 20px 20px 20px 20px;"></div>
+            <div style="width: 80px;height: 80px;background-color: #dfdfdf;margin: 20px 20px 20px 20px;"></div>
+        </div>
+        <div class="center">
+            <p>这是第一种,这就是这就是这就是这就是这就是这就是这就是这就是这就是 这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是 这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是 这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是这就是
+            </p>
+        </div>
+    </div>
+
+
+    <div class="con1">
+        <div class="center1">
+            <p>学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐 学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学学姐学姐学姐学姐学姐学姐学 姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学 姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学 姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学 姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学姐姐学姐学姐学姐学姐学姐学姐学姐 学姐学姐学姐学姐学姐学姐学姐学姐学姐姐学姐学姐学姐学姐学姐学姐学姐学姐学姐学</p>
+        </div>
+        <div class="left1">
+            <div style="width: 80px; height: 80px; background-color: #dfdfdf;margin: 20px 0 20px 20px;"></div>
+        </div>
+        <div class="right1">
+            <div style="width: 80px;height: 80px;background-color: #dfdfdf;margin: 20px 20px 20px 20px;"></div>
+            <div style="width: 80px;height: 80px;background-color: #dfdfdf;margin: 20px 20px 20px 20px;"></div>
+            <div style="width: 80px;height: 80px;background-color: #dfdfdf;margin: 20px 20px 20px 20px;"></div>
+            <div style="width: 80px;height: 80px;background-color: #dfdfdf;margin: 20px 20px 20px 20px;"></div>
+        </div>
+    </div>
+
+    <div class="con2">
+
+    </div>
+</body>
+
+</html>
