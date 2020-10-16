@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类似栅格布局</title>
+    <style>
+        .box1 {
+            width: calc(100% - 20px);
+            height: 50px;
+            background-color: #eee;
+        }
+        
+        @media screen and (min-width: 768px) {
+            .bigbox {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                margin: 0 auto;
+                width: 80%;
+                height: auto;
+                border: 1px solid #999;
+                padding: 20px 0px 20px 20px;
+            }
+            .box:nth-child(-n + 3) {
+                width: 33.333333%;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+            .box-1,
+            .box-3 {
+                width: 25%;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+            .box-2 {
+                width: 50%;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+            .box-4,
+            .box-5 {
+                width: 8.333333%;
+                height: 50px;
+            }
+            .box-6,
+            .box-7 {
+                width: 16.666667%;
+                height: 50px;
+            }
+            .box-8 {
+                width: 50%;
+                height: 50px;
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            .bigbox {
+                display: flex;
+                flex-flow: row wrap;
+                /* justify-content: space-between; */
+                margin: 0 auto;
+                width: 80%;
+                height: auto;
+                border: 1px solid #999;
+                padding: 20px 0px 20px 20px;
+            }
+            .box:nth-child(-n + 2) {
+                width: 50%;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+            .box:nth-child(3) {
+                width: 100%;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+            .box-1,
+            .box-3 {
+                width: 25%;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+            .box-2 {
+                width: 50%;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+            .box-4,
+            .box-5 {
+                width: 16.666667%;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+            .box-6 {
+                width: 66.666667%;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+            .box-7,
+            .box-8 {
+                width: 33.333333%;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="box">
+            <div class="box1"></div>
+        </div>
+        <div class="box">
+            <div class="box1"></div>
+        </div>
+        <div class="box">
+            <div class="box1"></div>
+        </div>
+        <div class="box-1">
+            <div class="box1"></div>
+        </div>
+        <div class="box-2">
+            <div class="box1"></div>
+        </div>
+        <div class="box-3">
+            <div class="box1"></div>
+        </div>
+        <div class="box-4">
+            <div class="box1"></div>
+        </div>
+        <div class="box-5">
+            <div class="box1"></div>
+        </div>
+        <div class="box-6">
+            <div class="box1"></div>
+        </div>
+        <div class="box-7">
+            <div class="box1"></div>
+        </div>
+        <div class="box-8">
+            <div class="box1"></div>
+        </div>
+    </div>
+</body>
+
+</html>

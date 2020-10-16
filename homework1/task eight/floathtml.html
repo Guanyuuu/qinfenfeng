@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类似栅格布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        @media screen and (min-width: 769px) {
+            .container {
+                width: 80%;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            /* 第一行排版 */
+            .row1>div {
+                float: left;
+                margin-top: 20px;
+                height: 50px;
+            }
+            .col-sm-4-1,
+            .col-sm-4-2,
+            .col-sm-4-3 {
+                display: flex;
+                justify-content: space-between;
+                width: 33.333333%;
+            }
+            .inner-1 {
+                background-color: blue;
+                width: 90%;
+                height: 100%;
+            }
+            /* 第二行排版 */
+            .row2>div {
+                margin-top: 20px;
+                float: left;
+                height: 50px;
+            }
+            .col-sm-3-4,
+            .col-sm-3-6 {
+                width: 25%;
+            }
+            .col-sm-6-5 {
+                width: 50%;
+            }
+            .inner-2 {
+                background-color: blue;
+                width: 90%;
+                height: 100%;
+            }
+            /* 第三行排版 */
+            .row3>div {
+                margin-top: 20px;
+                float: left;
+                height: 50px;
+            }
+            .col-sm-1-7,
+            .col-sm-1-8 {
+                width: 8.333333%;
+            }
+            .col-sm-2-9,
+            .col-sm-2-10 {
+                width: 16.6666667%;
+            }
+            .col-sm-6-11 {
+                width: 50%;
+            }
+            .inner-3 {
+                background-color: blue;
+                width: 90%;
+                height: 100%;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 80%;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            /* 第一行排版 */
+            .row1>div {
+                margin-top: 20px;
+                float: left;
+                height: 50px;
+            }
+            .col-sm-4-1,
+            .col-sm-4-2 {
+                width: 50%;
+            }
+            .col-sm-4-3 {
+                width: 100%;
+            }
+            .inner-1 {
+                background-color: blue;
+                width: 90%;
+                height: 100%;
+            }
+            /* 第二行排版 */
+            .row2>div {
+                margin-top: 20px;
+                float: left;
+                height: 50px;
+            }
+            .col-sm-3-4,
+            .col-sm-3-6 {
+                width: 25%;
+            }
+            .col-sm-6-5 {
+                width: 50%;
+            }
+            .inner-2 {
+                background-color: blue;
+                width: 90%;
+                height: 100%;
+            }
+            /* 第三行排版 */
+            .row3>div {
+                margin-top: 20px;
+                float: left;
+                height: 50px;
+            }
+            .col-sm-1-7,
+            .col-sm-1-8 {
+                width: 16.666667%;
+            }
+            .col-sm-2-9 {
+                width: 66.666667%;
+            }
+            .col-sm-2-10,
+            .col-sm-6-11 {
+                width: 33.333333%;
+            }
+            .inner-3 {
+                background-color: blue;
+                width: 90%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row1">
+            <div class="col-sm-4-1">
+                <div class="inner-1"></div>
+            </div>
+            <div class="col-sm-4-2">
+                <div class="inner-1"></div>
+            </div>
+            <div class="col-sm-4-3">
+                <div class="inner-1"></div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="col-sm-3-4">
+                <div class="inner-2"></div>
+            </div>
+            <div class="col-sm-6-5">
+                <div class="inner-2"></div>
+            </div>
+            <div class="col-sm-3-6">
+                <div class="inner-2"></div>
+            </div>
+        </div>
+        <div class="row3">
+            <div class="col-sm-1-7">
+                <div class="inner-3"></div>
+            </div>
+            <div class="col-sm-1-8">
+                <div class="inner-3"></div>
+            </div>
+            <div class="col-sm-2-9">
+                <div class="inner-3"></div>
+            </div>
+            <div class="col-sm-2-10">
+                <div class="inner-3"></div>
+            </div>
+            <div class="col-sm-6-11">
+                <div class="inner-3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
