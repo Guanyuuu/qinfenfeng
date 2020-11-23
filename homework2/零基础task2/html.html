@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>零基础task2</title>
+</head>
+
+<body>
+    <ul id="source">
+        <li>北京空气质量：<b>90</b></li>
+        <li>上海空气质量：<b>70</b></li>
+        <li>天津空气质量：<b>80</b></li>
+        <li>广州空气质量：<b>50</b></li>
+        <li>深圳空气质量：<b>40</b></li>
+        <li>福州空气质量：<b>32</b></li>
+        <li>成都空气质量：<b>90</b></li>
+    </ul>
+    <ul id="resort">
+    </ul>
+    <button id="sort-btn">排序</button>
+    <script>
+        var resort = document.getElementById('resort'); //获取
+        function getData() { // 创建一个函数。获取ul中的数据，并保存于新的数组
+            var source = document.getElementById('source');
+            var b = source.getElementsByTagName('b');
+            var li = source.getElementsByTagName('li');
+            var data = new Array();
+            for (var i = 0; i < li.length; i++) {
+                data[i] = new Array(); // 创建一个二维数组
+                data[i][0] = li[i].innerText.substr(0, 2); // 存数据
+                var num1 = b[i].innerText;
+                data[i][1] = parseInt(num1); // 将字符串转化为整数储存
+            }
+            // console.log(data);
+            return data;
+        }
+
+        function sortAqiData(data) { // 对所得的数据，对它的第二列数据进行排序
+            data.sort(function(a, b) {
+                    return a[1] - b[1]; // 按升序排列
+                })
+                // console.log(data);
+            return data;
+        }
+
+        function render(data) { // 将排列好的数组，添加到ulID为resort中
+            var resort = document.getElementById('resort');
+            var j = 1; // 控制名次
+            for (var i = 0; i < data.length; i++) {
+                resort.innerHTML += '<li>第' + j + '名：' + data[i][0] + '空气质量：<b>' + data[i][1] + '<b/></li>' // 通过innerHTML添加
+                j++;
+            }
+        }
+
+        function btnHuandle() { // 集合调用以上函数
+            var aqiData = getData();
+            aqiData = sortAqiData(aqiData);
+            render(aqiData);
+        }
+
+        function init() {
+            var button = document.getElementById('sort-btn');
+            button.onclick = function() { //绑定事件，点击按钮后调用btnHuandle函数
+                btnHuandle();
+            }
+        }
+        init(); // 调用总函数
+    </script>
+</body>
+
+</html>
